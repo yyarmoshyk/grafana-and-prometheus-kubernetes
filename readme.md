@@ -5,7 +5,8 @@ There is no need to do extra effort to install prometheus. You can grab the exis
 ### Installation steps
 1. Install the stable helm chart:
 ```bash
-helm install prometheus-sample  stable/prometheus --set server.service.type=LoadBalancer
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm install prometheus-sample prometheus-community/prometheus --set server.service.type=LoadBalancer
 ```
 2. The output will contain the number of commands to find the desired access points but since we specified the `LoadBalancer` as service type run the following commands to get the public access point:
 ```bash
