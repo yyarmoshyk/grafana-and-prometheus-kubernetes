@@ -22,7 +22,7 @@ This example includes only one dashboard that prints the `mysql_slow_query` resu
 ### Installation steps
 1. Deploy EKS service with the load balancer:
 ```bash
-helm install grafana-sample  stable/grafana --set service.type=LoadBalancer
+helm install grafana-sample  bitnami/grafana --set service.type=LoadBalancer
 ```
 2. Run the following to get the ALB address:
 ```bash
